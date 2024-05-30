@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <style>
+        /* 先清除預設設定 */
+        body {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: sans-serif;
+            font-weight: 50;
+        }
+
+        /* 主外圍 */
+        .contain {
+            width: 100%;
+            height: 1300px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 轉為彈性盒，並置中對齊 */
+        .big {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 上方導覽列 */
+        .top {
+            width: 100%;
+            height: 80px;
+            background: #222222;
+        }
+
+        /* 中間內容區塊 */
+        .middle {
+            flex-direction: column;
+        }
+
+        /* 轉為彈性盒，並平均分開對齊 */
+        .box {
+            width: 1600px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            /* background: #f16b6b; */
+        }
+
+        /* 設定導覽列的文字顏色 */
+        .a {
+            font-size: 20px;
+            color: white;
+        }
+
+        /* 設定中間各別區塊的寬度 */
+        .b,
+        .c,
+        .d {
+            width: 1600px;
+        }
+
+        /* 中間深灰底的區塊設定 */
+        .c {
+            height: 150px;
+            border-radius: 10px;
+            background: #626c72;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* 右上角選單文字設定 */
+        .e {
+            width: 360px;
+            font-size: 16px;
+            color: white;
+        }
+
+        /* 圖片 900 * 400 px 設定*/
+        .pic {
+            width: 900px;
+            height: 400px;
+            background: #d8d8d8;
+            border-radius: 10px;
+        }
+
+        /* 圖片旁的文字內容 */
+        .text {
+            width: 600px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* 底部區塊，做成卡片，並套用置後續2個 */
+        .card {
+            width: 500px;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid #c4c4c4;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        table {
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 0 20px;
+            /* border: 1px solid #c4c4c4; */
+        }
+
+        tr:nth-child(1)>td {
+            height: 80px;
+            /* padding-top: 20px; */
+        }
+
+        tr:nth-child(2)>td {
+            vertical-align: text-top;
+        }
+
+        tr:nth-child(3) {
+            height: 70px;
+            background: #dfdfdf;
+            border-top: 1px solid #c4c4c4;
+        }
+
+        /* A、B按鈕尺寸外觀設定 */
+        .Ab {
+            width: 150px;
+            height: 44px;
+            border-radius: 10px;
+            border: none;
+            background: rgb(35, 112, 255);
+        }
+
+        .Bb {
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background: rgb(35, 112, 255);
+        }
+
+        /* 按鈕的連結網址文字設定 */
+        a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer {
+            width: 100%;
+            height: 150px;
+            background: #222222;
+            font-size: 26px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 2024/5/20_Bootstrap 作業 https://startbootstrap.com/previews/small-business -->
+
+    <div class="contain">
+        <div class="top big">
+            <div class="box">
+                <div class="a">Start Bootstrap</div>
+                <div class="box e">
+                    <div>Home</div>
+                    <div>About</div>
+                    <div>Contact</div>
+                    <div>Services</div>
+                </div>
+            </div>
+        </div>
+        <div class="middle big">
+            <div class="box b">
+                <div class="pic"></div>
+                <div class="text">
+                    <h1>Business Name or Tagline</h1>
+                    <p class="p1">
+                        This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!
+                    </p>
+                    <button class="Ab">
+                        <a href="https://startbootstrap.github.io/startbootstrap-small-business/#!">
+                            Call to Action！
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div class="box c">
+            <p class="p2">
+                This call to action card is a great place to showcase some important information or display a clever tagline!
+            </p>
+        </div>
+        <div class="box d">
+            <div class="card">
+                <table>
+                    <tr>
+                        <td>
+                            <h1>Card One</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="Bb">
+                                <a href="https://startbootstrap.github.io/startbootstrap-small-business/#!">
+                                    More info
+                                </a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card">
+                <table>
+                    <tr>
+                        <td>
+                            <h1>Card Two</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="Bb">
+                                <a href="https://startbootstrap.github.io/startbootstrap-small-business/#!">
+                                    More info
+                                </a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card">
+                <table>
+                    <tr>
+                        <td>
+                            <h1>Card Three</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="Bb">
+                                <a href="https://startbootstrap.github.io/startbootstrap-small-business/#!">
+                                    More info
+                                </a>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="footer big">Copyright © Your Website 2023</div>
+    </div>
+</body>
+
+</html>
